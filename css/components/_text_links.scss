@@ -1,0 +1,23 @@
+:root {
+    --color-text: var(--color-darker-grey);
+    --color-link: var(--color-deep-blue);
+    --color-link-hover: var(--color-bright-blue);
+}
+
+.dark-mode,
+.blue-bg {
+    --color-text: var(--color-light-grey);
+    --color-link: var(--color-deep-blue);
+    --color-link-hover: var(--color-bright-blue);
+}
+
+body:not(.wp-admin) {
+    color: var(--color-text);
+
+    a {
+        color: var(--color-link);
+        &:hover {
+            color: var(--color-link-hover);
+        }
+    }
+}

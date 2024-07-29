@@ -1,0 +1,16 @@
+:root {
+    --color-night-blue: var(--e-global-color-1f6219b, #000021);
+    --color-deep-blue: var(--e-global-color-70f57b4, #1F5E94);
+    --color-bright-blue: var(--e-global-color-5c8f582, #0C66B9);
+    --color-darker-grey: var(--e-global-color-c9e5e53, #444444);
+    --color-dark-grey: var(--e-global-color-7a381b2, #525252);
+    --color-medium-grey: var(--e-global-color-88b9021, #F2F2F2);
+    --color-light-grey: var(--e-global-color-4a920a7, #F9F9F9);
+    --color-white: var(--e-global-color-334ce51, #FFFFFF);
+
+    --color-accent: var(--color-deep-blue);
+}
+
+.dark-mode {
+    --color-text: var(--color-light-grey);
+}

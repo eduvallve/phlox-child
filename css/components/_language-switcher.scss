@@ -1,0 +1,20 @@
+select.md-menu_language-switcher:not([multiple]) {
+    color: var(--color-dark-grey);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+
+    @media screen and (min-width:769px) {
+        font-size: .875rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+    }
+
+    .dark-mode &,
+    body.home & {
+        @media screen and (min-width:769px) {
+            color: var(--color-light-grey);
+        }
+    }
+}

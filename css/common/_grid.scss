@@ -1,0 +1,29 @@
+.cols {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+@function calculate-width($columns) {
+    @return calc($columns / 11 * 100%);
+}
+
+@mixin column($columns) {
+    margin: 0 calc(var(--col-gap) * 0.5);
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: calc(calculate-width($columns) - var(--col-gap));
+    }
+}
+
+@for $i from 1 through 11 {
+    .col-#{$i} {
+        @include column($i);
+    }
+}
+
+.col-12 {
+    margin: 0;
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+#wpadminbar .quicklinks .menupop ul li .ab-item .aux-state {
+    display: none;
+}
+
+#adminmenu span.update-plugins.count-1 {
+    display: none;
+}
+
+[data-slug="auxin-portfolio"] a.toggle-auto-update.aria-button-if-js {
+    display: none;
+}

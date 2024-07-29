@@ -1,0 +1,11 @@
+.icon {
+    height: 0.85em;
+    display: inline-block;
+    aspect-ratio: 1;
+    margin-right: 0.5em;
+    transform: translateY(1px);
+}
+
+.icon__link-external {
+    mask-image: url(/wp-content/uploads/2024/04/icon_link-external.svg);
+}

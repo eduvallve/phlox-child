@@ -1,0 +1,14 @@
+.lightgrey-bg {
+    background-color: var(--color-light-grey);
+}
+
+.dark-mode {
+    #inner-body,
+    .lightgrey-bg {
+        background-color: var(--color-night-blue);
+    }
+
+    .dark-bg {
+        filter: brightness(0.85);
+    }
+}

@@ -1,0 +1,175 @@
+:root {
+    --color-button-primary-bg: var(--color-deep-blue);
+    --color-button-primary-border: var(--color-deep-blue);
+    --color-button-primary-text: var(--color-medium-grey);
+    --color-button-primary-icon: var(--color-medium-grey);
+
+    --color-button-primary-hover-bg: var(--color-bright-blue);
+    --color-button-primary-hover-border: var(--color-bright-blue);
+    --color-button-primary-hover-text: var(--color-medium-grey);
+    --color-button-primary-hover-icon: var(--color-medium-grey);
+
+    --color-button-secondary-bg: transparent;
+    --color-button-secondary-border: var(--color-deep-blue);
+    --color-button-secondary-text: var(--color-deep-blue);
+    --color-button-secondary-icon: var(--color-deep-blue);
+
+    --color-button-secondary-hover-bg: transparent;
+    --color-button-secondary-hover-border: var(--color-bright-blue);
+    --color-button-secondary-hover-text: var(--color-bright-blue);
+    --color-button-secondary-hover-icon: var(--color-bright-blue);
+
+    --text-button-size: .875rem;
+
+    .dark-bg,
+    .dark-mode {
+        --color-button-primary-bg: var(--color-light-grey);
+        --color-button-primary-border: var(--color-light-grey);
+        --color-button-primary-text: var(--color-deep-blue);
+        --color-button-primary-icon: var(--color-deep-blue);
+
+        --color-button-primary-hover-bg: var(--color-white);
+        --color-button-primary-hover-border: var(--color-white);
+        --color-button-primary-hover-text: var(--color-bright-blue);
+        --color-button-primary-hover-icon: var(--color-bright-blue);
+
+        --color-button-secondary-bg: transparent;
+        --color-button-secondary-border: var(--color-light-grey);
+        --color-button-secondary-text: var(--color-light-grey);
+        --color-button-secondary-icon: var(--color-light-grey);
+
+        --color-button-secondary-hover-bg: transparent;
+        --color-button-secondary-hover-border: var(--color-white);
+        --color-button-secondary-hover-text: var(--color-white);
+        --color-button-secondary-hover-icon: var(--color-white);
+    }
+}
+
+a.elementor-button,
+.custom-button {
+    border-radius: 50px;
+    padding: .5rem 1rem;
+    line-height: normal;
+    display: inline-block;
+}
+
+.elementor-button,
+.custom-button {
+    &-text {
+        font-size: var(--text-button-size);
+    }
+
+    &-icon {
+        &,
+        svg,
+        svg.e-font-icon-svg {
+            height: var(--text-button-size);
+            vertical-align: baseline;
+            aspect-ratio: 1;
+        }
+    }
+
+    .btn-large & {
+        padding: 1rem 2rem;
+        font-weight: bold;
+    }
+}
+
+@each $btn_style in 'primary', 'secondary' {
+    @each $btn_state in 'default', 'hover' {
+
+        $state: -#{$btn_state};
+        $tag: #{':'}#{$btn_state};
+
+        @if ($btn_state == 'default') {
+            $state: '';
+            $tag: '';
+        }
+
+        .btn-#{$btn_style}#{$tag} {
+            .elementor-button,
+            .custom-button {
+
+                background-color: var(--color-button-#{$btn_style}#{$state}-bg);
+                border: 1px solid var(--color-button-#{$btn_style}#{$state}-border);
+
+                &-text {
+                    color: var(--color-button-#{$btn_style}#{$state}-text);
+                }
+
+                &-icon {
+                    svg {
+                        &,
+                        path {
+                            fill: var(--color-button-#{$btn_style}#{$state}-icon);
+                        }
+                    }
+                    // &.icon::before {
+                    //     content: "";
+                    //     height: var(--text-button-size);
+                    //     display: inline-block;
+                    //     aspect-ratio: 1;
+                    //     margin-right: 0.5em;
+                    //     background-image: none;
+                    //     transform: translateY(1px);
+                    //     background-color: var(--color-button-secondary-icon);
+                    //     mask-size: auto 100%;
+                    // }
+                    &.icon {
+                        background-color: var(--color-button-secondary-icon);
+                        mask-size: auto 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* -- OLD Animations -- */
+/*
+@keyframes fadeHoverBtnLeft {
+    0% {
+        color: rgb(31, 94, 148);
+        background-color: white;
+    }
+
+    50% {
+        padding-left: 6px;
+        padding-right: 26px;
+        color: white;
+        background-color: white;
+    }
+
+    51% {
+        padding-right: 6px;
+        padding-left: 26px;
+        color: white;
+    }
+
+    100% {
+        color: white;
+        background-color: rgb(52 133 203);
+    }
+}
+
+@keyframes fadeHoverBtnIconLeft {
+    0% {
+        opacity: 1;
+        filter: none;
+    }
+
+    50% {
+        opacity: 0;
+        filter: none;
+    }
+
+    51% {
+        filter: brightness(0) invert(1);
+    }
+
+    100% {
+        opacity: 1;
+        filter: brightness(0) invert(1);
+    }
+}
+*/

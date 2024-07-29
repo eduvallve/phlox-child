@@ -1,0 +1,62 @@
+@import './common/background';
+@import './common/footer';
+@import './common/grid';
+@import './common/header';
+@import './common/icons';
+@import './common/variables';
+
+@import './components/button';
+@import './components/custom_layout_portfolio';
+@import './components/dark-mode';
+@import './components/focused_on';
+@import './components/hearts';
+@import './components/language-switcher';
+@import './components/night-sky';
+@import './components/project_page';
+@import './components/text_links';
+
+
+span.strong {
+    font-weight: bold;
+}
+
+.rights_line {
+    font-size: 0.65em;
+    padding: 10px 0;
+}
+
+/* Language specific changes */
+
+.e-con.e-flex>.e-con-inner.flex__row--inverted {
+    flex-direction: column-reverse;
+}
+
+@media screen and (max-width:439px) {
+    .elementor-widget-heading h2.elementor-heading-title.elementor-size-xxl {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 20px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .e-con.e-flex>.e-con-inner.flex__row--inverted {
+        flex-direction: row-reverse;
+    }
+
+    .e-con.e-flex>.e-con-inner.flex__row--inverted>.elementor-element:nth-child(1) h2 {
+        text-align: start;
+    }
+
+    .e-con.e-flex>.e-con-inner.flex__row--inverted>.elementor-element:nth-child(2) h2 {
+        text-align: end;
+    }
+}
+
+/* Custom specific classes */
+
+.text-light .elementor-widget-shortcode {
+    color: #f2f2f2;
+    font-family: var(--e-global-typography-accent-font-family), Sans-serif;
+    font-style: italic;
+}

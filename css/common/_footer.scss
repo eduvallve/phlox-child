@@ -1,0 +1,16 @@
+footer {
+    .elementor .elementor-hidden {
+        &-mobile,
+        &-phone {
+            &:has(.aux-has-logo) {
+                display: block;
+            }
+        }
+    }
+
+    .aux-has-logo img {
+        .dark-mode & {
+            filter: invert(1);
+        }
+    }
+}

@@ -1,0 +1,162 @@
+:root {
+    --color-tech-tag-bg: transparent;
+    --color-tech-tag-border: var(--color-deep-blue);
+    --color-tech-tag-text: var(--color-deep-blue);
+    --color-tech-tag-icon: var(--color-deep-blue);
+
+    --color-tech-tag-hover-bg: transparent;
+    --color-tech-tag-hover-border: var(--color-bright-blue);
+    --color-tech-tag-hover-text: var(--color-bright-blue);
+    --color-tech-tag-hover-icon: var(--color-bright-blue);
+
+    --text-button-size: .875rem;
+
+    .dark-bg,
+    .dark-mode {
+        --color-tech-tag-bg: transparent;
+        --color-tech-tag-border: var(--color-light-grey);
+        --color-tech-tag-text: var(--color-light-grey);
+        --color-tech-tag-icon: var(--color-light-grey);
+
+        --color-tech-tag-hover-bg: transparent;
+        --color-tech-tag-hover-border: var(--color-white);
+        --color-tech-tag-hover-text: var(--color-white);
+        --color-tech-tag-hover-icon: var(--color-white);
+    }
+}
+
+.tech__involved {
+    @each $btn_state in 'default', 'hover' {
+
+        $state: -#{$btn_state};
+        $tag: #{':'}#{$btn_state};
+
+        @if ($btn_state =='default') {
+            $state: '';
+            $tag: '';
+        }
+
+        .elementor-button-link#{$tag} {
+            background-color: var(--color-tech-tag#{$state}-bg);
+            border: 1px solid var(--color-tech-tag#{$state}-border);
+
+            .elementor-button {
+
+                &-text {
+                    color: var(--color-tech-tag#{$state}-text);
+                    font-size: var(--text-button-size);
+                }
+
+                &-icon svg {
+
+                    &,
+                    path {
+                        fill: var(--color-tech-tag#{$state}-icon);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.aux-widget-related-posts {
+    article.post .entry-media {
+        margin-bottom: var(--col-gap);
+
+        .dark-mode & {
+            filter: brightness(0.75);
+            transition: filter .25s;
+
+            &:hover {
+                filter: brightness(1);
+            }
+        }
+
+    }
+    .hentry {
+        .entry-title a {
+            line-height: normal;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: var(--color-deep-blue);
+
+            .dark-mode & {
+                color: var(--color-bright-blue);
+            }
+        }
+
+        .entry-info {
+            display: none;
+        }
+    }
+    &.widget-container .widget-title {
+        font-weight: lighter;
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* Project pages styles */
+.aux-media-frame.aux-media-image img {
+    transition: filter .25s;
+    filter: grayscale(1);
+}
+
+.aux-media-frame.aux-media-image:hover img {
+    filter: grayscale(0);
+}
+
+.entry-meta-data-container {
+    font-size: .875em;
+    line-height: normal;
+}
+
+dl dt {
+    float: inline-start;
+    margin-right: .5em;
+}
+
+dl dt:after {
+    content: ':';
+}
+
+.entry-overview-container {
+    display: none;
+}
+
+/* Single portfolio specific fixes */
+.single-portfolio .aux-next-prev-posts:not(.aux-sticky-nav),
+.aux-full-container>.aux-wrapper>.aux-container.aux-related-container.aux-fold {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media screen and (min-width:1160px) {
+
+    .single-portfolio .aux-next-prev-posts:not(.aux-sticky-nav),
+    .aux-full-container>.aux-wrapper>.aux-container.aux-related-container.aux-fold {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 1140px;
+        margin: auto;
+    }
+}
+
+.aux-resp .type-portfolio.aux-side-top .entry-side.aux-has-meta-data {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.type-portfolio .entry-media img.wp-post-image {
+    .dark-mode & {
+        opacity: .75;
+    }
+}
+
+.aux-next-prev-posts,
+.aux-arrow-nav {
+    .dark-mode & {
+        filter: invert(1);
+    }
+}

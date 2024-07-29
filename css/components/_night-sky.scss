@@ -1,0 +1,68 @@
+/* Night Sky bg container */
+
+div.container__night-sky {
+    overflow: hidden;
+    background-color: var(--color-night-blue);
+
+    *,
+    .elementor-heading-title {
+        color: var(--color-light-grey);
+    }
+}
+
+.container__night-sky canvas.nightSky {
+    width: 120vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: circle infinite 90s linear;
+    pointer-events: none;
+    mask-image: radial-gradient(black, transparent);
+    -webkit-mask-image: radial-gradient(black, transparent);
+}
+
+
+/* Animate elements container -- hide elements on publish mode and if they're not */
+
+body:not(.elementor-editor-active) .elementor-element.container__animate--fade-up .elementor-element:not(.active) {
+    display: none;
+}
+
+body:not(.elementor-editor-active) .elementor-element.container__animate--fade-up .elementor-element.active {
+    animation: animatefadeUp ease-in-out 2s;
+}
+
+
+/* Animations */
+@keyframes circle {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes animatefadeUp {
+    0% {
+        transform: translateY(0.5em);
+        opacity: 0;
+    }
+
+    33% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    66% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-0.5em);
+        opacity: 0;
+    }
+}
