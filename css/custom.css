@@ -939,6 +939,7 @@ select.md-menu_language-switcher:not([multiple]) {
 div.container__night-sky {
   overflow: hidden;
   background-color: var(--color-night-blue);
+  min-height: 90vh;
 }
 div.container__night-sky *,
 div.container__night-sky .elementor-heading-title {
