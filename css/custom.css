@@ -939,7 +939,6 @@ select.md-menu_language-switcher:not([multiple]) {
 div.container__night-sky {
   overflow: hidden;
   background-color: var(--color-night-blue);
-  min-height: 90vh;
 }
 div.container__night-sky *,
 div.container__night-sky .elementor-heading-title {
@@ -956,6 +955,18 @@ div.container__night-sky .elementor-heading-title {
   pointer-events: none;
   mask-image: radial-gradient(black, transparent);
   -webkit-mask-image: radial-gradient(black, transparent);
+}
+
+.icon__scroll-down {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon__scroll-down img {
+  width: 30px;
+  animation: bounce ease-in-out 1.5s infinite;
+  cursor: pointer;
 }
 
 /* Animate elements container -- hide elements on publish mode and if they're not */
@@ -992,6 +1003,17 @@ body:not(.elementor-editor-active) .elementor-element.container__animate--fade-u
   100% {
     transform: translateY(-0.5em);
     opacity: 0;
+  }
+}
+@keyframes bounce {
+  from {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(-10px);
   }
 }
 :root {

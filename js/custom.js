@@ -95,6 +95,7 @@ class NightSky extends BasicComponent {
     init() {
         this.createCanvas();
         this.populateCanvas();
+        this.addScrollButton();
     }
 
     createCanvas() {
@@ -153,6 +154,17 @@ class NightSky extends BasicComponent {
             });
         }
         render();
+    }
+
+    addScrollButton() {
+        const img = document.createElement('img');
+        img.src = '/wp-content/themes/phlox-child/assets/scroll_down-white.svg';
+        img.setAttribute('alt', 'Scroll down icon');
+        const container = document.createElement('a');
+        container.classList.add('icon__scroll-down');
+        container.href = '#about';
+        container.appendChild(img);
+        this.el.appendChild(container);
     }
 }
 
