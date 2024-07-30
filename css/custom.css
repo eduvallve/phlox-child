@@ -10,6 +10,11 @@
   filter: brightness(0.85);
 }
 
+#about {
+  height: 100vh;
+  min-height: 550px;
+}
+
 footer .elementor .elementor-hidden-mobile:has(.aux-has-logo), footer .elementor .elementor-hidden-phone:has(.aux-has-logo) {
   display: block;
 }
