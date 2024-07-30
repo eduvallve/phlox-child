@@ -823,18 +823,22 @@ body:not(.dark-mode) .dark-mode__icon-sun {
 }
 
 /* Fancy global styles */
-.heart {
-  color: rgb(31, 94, 148);
+.heart__rotating-3d.elementor-element {
+  mix-blend-mode: plus-lighter;
+}
+.heart__rotating-3d.elementor-element .elementor-widget-container img {
+  width: 100px;
+  max-width: 100%;
+}
+@media (width >= 768px) {
+  .heart__rotating-3d.elementor-element .elementor-widget-container img {
+    transform: translateY(-10px);
+  }
 }
 
 /* hearts */
 .otherWorks__list .heart {
   filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.1450980392));
-}
-
-.otherWorks__list .heart__3d-modelling {
-  transform-origin: bottom center;
-  animation: tdrotate linear 7s infinite;
 }
 
 .otherWorks__list .heart__motion-graphics {
