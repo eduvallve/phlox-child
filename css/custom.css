@@ -1196,7 +1196,7 @@ dl dt:after {
 }
 
 .type-portfolio.aux-side-top div.entry-side {
-  width: var(--desktop-width);
+  width: calc(var(--desktop-width) + 20px);
   max-width: 100vw;
 }
 
