@@ -1208,6 +1208,13 @@ dl dt:after {
   filter: invert(1);
 }
 
+.single-portfolio .elementor-heading-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
 :root {
   --color-text: var(--color-darker-grey);
   --color-link: var(--color-deep-blue);
