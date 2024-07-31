@@ -1094,29 +1094,15 @@ body:not(.elementor-editor-active) .elementor-element.container__animate--fade-u
   --color-tech-tag-hover-icon: var(--color-white);
 }
 
-.tech__involved .elementor-button-link {
-  background-color: var(--color-tech-tag-bg);
-  border: 1px solid var(--color-tech-tag-border);
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--col-gap) * 0.5);
+  font-size: 0.875rem;
 }
-.tech__involved .elementor-button-link .elementor-button-text {
-  color: var(--color-tech-tag-text);
-  font-size: var(--text-button-size);
-}
-.tech__involved .elementor-button-link .elementor-button-icon svg,
-.tech__involved .elementor-button-link .elementor-button-icon svg path {
-  fill: var(--color-tech-tag-icon);
-}
-.tech__involved .elementor-button-link:hover {
-  background-color: var(--color-tech-tag-hover-bg);
-  border: 1px solid var(--color-tech-tag-hover-border);
-}
-.tech__involved .elementor-button-link:hover .elementor-button-text {
-  color: var(--color-tech-tag-hover-text);
-  font-size: var(--text-button-size);
-}
-.tech__involved .elementor-button-link:hover .elementor-button-icon svg,
-.tech__involved .elementor-button-link:hover .elementor-button-icon svg path {
-  fill: var(--color-tech-tag-hover-icon);
+.project__tags-text {
+  margin: 1rem 0;
+  font-size: 0.875rem;
 }
 
 .aux-widget-related-posts article.post .entry-media {

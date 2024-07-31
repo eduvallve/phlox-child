@@ -25,38 +25,15 @@
     }
 }
 
-.tech__involved {
-    @each $btn_state in 'default', 'hover' {
+.project__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--col-gap)* .5);
+    font-size: .875rem;
 
-        $state: -#{$btn_state};
-        $tag: #{':'}#{$btn_state};
-
-        @if ($btn_state =='default') {
-            $state: '';
-            $tag: '';
-        }
-
-        .elementor-button-link#{$tag} {
-            background-color: var(--color-tech-tag#{$state}-bg);
-            border: 1px solid var(--color-tech-tag#{$state}-border);
-
-            .elementor-button {
-
-                &-text {
-                    color: var(--color-tech-tag#{$state}-text);
-                    font-size: var(--text-button-size);
-                }
-
-                &-icon svg {
-
-                    &,
-                    path {
-                        fill: var(--color-tech-tag#{$state}-icon);
-                    }
-                }
-            }
-
-        }
+    &-text {
+        margin: 1rem 0;
+        font-size: .875rem;
     }
 }
 

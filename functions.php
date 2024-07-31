@@ -47,3 +47,4 @@ function years_experience_counter(){
 add_shortcode('edu-years-experience', 'years_experience_counter');
 
 include_once 'php/dark-mode.php';
+include_once 'php/portfolio-page-tags.php';
