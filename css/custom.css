@@ -1098,7 +1098,7 @@ body:not(.elementor-editor-active) .elementor-element.container__animate--fade-u
   display: flex;
   flex-wrap: wrap;
   gap: calc(var(--col-gap) * 0.5);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 .project__tags-text {
   margin: 1rem 0;
