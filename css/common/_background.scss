@@ -13,7 +13,9 @@
     }
 }
 
-#about {
-    height: 100vh;
-    min-height: 550px;
+@media (width >= 768px) {
+    #about {
+        height: 100vh;
+        min-height: 550px;
+    }
 }
