@@ -17,12 +17,12 @@ function show_project_tags () {
     $tagsList = get_project_tags();
     $content = '';
     foreach ($tagsList as $tag) {
-        $content .= "<span class='btn-secondary'><a href='/portfolio-tag/$tag->slug' target='_blank' class='custom-button'>$tag->name</a></span>";
+        $content .= "<a href='/portfolio-tag/$tag->slug' target='_blank' class='custom-button'>$tag->name</a>";
     }
 
     return "<h3 class='elementor-heading-title project__tags-title'>Tech involved</h3>
             <p class='project__tags-text'>This project is created by means of:</p>
-            <div class='project__tags'>$content</div>";
+            <div class='project__tags btn-secondary'>$content</div>";
 }
 
 add_shortcode('current_project_tags', 'show_project_tags');
