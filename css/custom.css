@@ -1202,6 +1202,17 @@ dl dt:after {
   font-weight: 800;
 }
 
+@media (width < 768px) {
+  .has-post-thumbnail .entry-media {
+    height: 56.25vw;
+    max-height: 250px;
+  }
+  .has-post-thumbnail .entry-media img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
 :root {
   --color-text: var(--color-darker-grey);
   --color-link: var(--color-deep-blue);

@@ -149,3 +149,15 @@ dl dt:after {
     letter-spacing: 1px;
     font-weight: 800;
 }
+
+.has-post-thumbnail .entry-media {
+    @media (width < 768px) {
+        height: calc(9 * 100vw / 16);
+        max-height: 250px;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}
