@@ -1,11 +1,13 @@
 @import './common/background';
 @import './common/footer';
+@import './common/global';
 @import './common/grid';
 @import './common/header';
 @import './common/icons';
 @import './common/variables';
 
 @import './components/button';
+@import './components/breadcrumbs';
 @import './components/custom_layout_portfolio';
 @import './components/dark-mode';
 @import './components/focused_on';

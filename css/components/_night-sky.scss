@@ -4,6 +4,10 @@ div.container__night-sky {
     overflow: hidden;
     background-color: var(--color-night-blue);
 
+    p {
+        margin: 0;
+    }
+
     *,
     .elementor-heading-title {
         color: var(--color-light-grey);

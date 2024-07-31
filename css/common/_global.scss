@@ -1,0 +1,25 @@
+:root {
+    --desktop-width: 1140px;
+}
+
+.page-title-section,
+.aux-territory {
+
+    &,
+    &.aux-boxed-container,
+    & .aux-boxed-container {
+        width: var(--desktop-width);
+        max-width: 100vw;
+        margin: auto;
+
+        .aux-container {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            @media (width > 1170px) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}

@@ -148,6 +148,11 @@ dl dt:after {
     padding-left: 10px;
 }
 
+.type-portfolio.aux-side-top div.entry-side {
+    width: var(--desktop-width);
+    max-width: 100vw;
+}
+
 .type-portfolio .entry-media img.wp-post-image {
     .dark-mode & {
         opacity: .75;

@@ -1,5 +1,6 @@
 footer {
     .elementor .elementor-hidden {
+
         &-mobile,
         &-phone {
             &:has(.aux-has-logo) {
@@ -8,9 +9,17 @@ footer {
         }
     }
 
-    .aux-has-logo img {
-        .dark-mode & {
-            filter: invert(1);
+
+    .aux-has-logo {
+        &.aux-logo-anchor {
+            width: 40px;
+            max-width: unset;
+        }
+
+        img {
+            .dark-mode & {
+                filter: invert(1);
+            }
         }
     }
 }
