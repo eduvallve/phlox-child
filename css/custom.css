@@ -1243,11 +1243,12 @@ dl dt:after {
   .e-con.e-con > .e-con-inner > .elementor-widget.image__extra-wide {
     width: 1600px;
     max-width: calc(100vw - 60px);
+    margin-left: calc(600px - 50vw);
   }
 }
 @media (width >= 1660px) {
   .e-con.e-con > .e-con-inner > .elementor-widget.image__extra-wide {
-    margin-left: calc(600px - 50vw);
+    margin-left: -230px;
   }
 }
 
