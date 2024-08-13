@@ -161,3 +161,11 @@ dl dt:after {
         }
     }
 }
+
+.e-con.e-con>.e-con-inner>.elementor-widget.image__extra-wide {
+    @media (width >= 1200px) {
+        width: 1600px;
+        max-width: calc(100vw - 60px);
+        margin-left: calc(600px - 50vw);
+    }
+}
