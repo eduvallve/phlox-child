@@ -1239,6 +1239,11 @@ dl dt:after {
   }
 }
 
+.e-con.e-con > .e-con-inner > .elementor-widget.image__extra-wide {
+  border-radius: 1rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1607843137);
+  overflow: hidden;
+}
 @media (width >= 1200px) {
   .e-con.e-con > .e-con-inner > .elementor-widget.image__extra-wide {
     width: 1600px;
