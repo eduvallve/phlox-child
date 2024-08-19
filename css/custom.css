@@ -1257,6 +1257,22 @@ dl dt:after {
   }
 }
 
+.color__palette-ink {
+  text-align: center;
+}
+.color__palette-ink span {
+  --size: clamp(60px, 10vw, 80px);
+  width: var(--size);
+  height: var(--size);
+  display: block;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1450980392);
+  margin: 0 auto 20px;
+  border-radius: var(--size);
+}
+.color__palette-ink figcaption {
+  text-transform: lowercase;
+}
+
 :root {
   --color-text: var(--color-darker-grey);
   --color-link: var(--color-deep-blue);
