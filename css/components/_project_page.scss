@@ -182,7 +182,7 @@ dl dt:after {
     text-align: center;
 
     span {
-        --size: clamp(60px, 10vw, 80px);
+        --size: clamp(60px, 8vw, 80px);
         width: var(--size);
         height: var(--size);
         display: block;
