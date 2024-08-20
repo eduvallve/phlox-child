@@ -505,6 +505,9 @@ a.elementor-button,
 .container__shadowed {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1450980392);
 }
+.container__icon-list img[src*=svg] {
+  width: clamp(40px, 25%, 60px);
+}
 
 .projects {
   --projects-filter-color: var(--color-darker-grey);
