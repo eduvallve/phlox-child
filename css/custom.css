@@ -498,11 +498,11 @@ a.elementor-button,
   text-align: center;
   color: var(--color-text);
 }
-.container__rounded {
+.container__rounded.e-con {
   border-radius: 1rem;
   padding: 15px 20px;
 }
-.container__shadowed.e-con {
+.container__shadowed {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1450980392);
 }
 

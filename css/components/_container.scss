@@ -29,12 +29,12 @@
         }
     }
 
-    &__rounded {
+    &__rounded.e-con {
         border-radius: 1rem;
         padding: 15px 20px;
     }
 
-    &__shadowed.e-con {
+    &__shadowed {
         box-shadow: 2px 2px 10px #00000025;
     }
 }
